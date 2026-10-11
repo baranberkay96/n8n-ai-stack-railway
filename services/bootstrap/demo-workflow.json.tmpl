@@ -1,0 +1,52 @@
+{
+  "id": "railwayDemoChat1",
+  "name": "Local AI chat (Ollama) - demo",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "6c1a4f3e-0b9d-4f53-9a51-1f2b8f6d0a01",
+      "name": "When chat message received",
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1,
+      "position": [660, 340],
+      "webhookId": "0f6f5f9e-3d1c-4c55-8f5e-7b7d2a9c4e11"
+    },
+    {
+      "parameters": {},
+      "id": "6c1a4f3e-0b9d-4f53-9a51-1f2b8f6d0a02",
+      "name": "Basic LLM Chain",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [880, 340]
+    },
+    {
+      "parameters": {
+        "model": "__CHAT_MODEL__",
+        "options": {}
+      },
+      "id": "6c1a4f3e-0b9d-4f53-9a51-1f2b8f6d0a03",
+      "name": "Ollama Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
+      "typeVersion": 1,
+      "position": [900, 560],
+      "credentials": {
+        "ollamaApi": {
+          "id": "railwayOllama001",
+          "name": "Ollama (Railway)"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "When chat message received": {
+      "main": [[{ "node": "Basic LLM Chain", "type": "main", "index": 0 }]]
+    },
+    "Ollama Chat Model": {
+      "ai_languageModel": [[{ "node": "Basic LLM Chain", "type": "ai_languageModel", "index": 0 }]]
+    }
+  },
+  "settings": { "executionOrder": "v1" },
+  "pinData": {},
+  "tags": []
+}
