@@ -5,7 +5,7 @@
 | Field | Value |
 |---|---|
 | Name | **n8n 2 AI Agent Stack (Ollama + Qdrant)** (version label `2` = n8n major version; n8n tags `n8n@2.x.y` and markets "n8n 2.0") |
-| Description | n8n queue mode with workers, local LLMs via Ollama and Qdrant vector memory. (76 chars) |
+| Description | n8n queue mode with workers, local LLMs via Ollama and Qdrant memory. (76 chars) |
 | Category | Automation |
 | Tags | n8n, automation, ai-agents, ollama, qdrant, queue, workers, llm |
 | User input at deploy | **None.** Owner account is created in the browser on first visit (n8n's own setup flow). |

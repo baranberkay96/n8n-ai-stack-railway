@@ -1,6 +1,6 @@
 {
   "name": "n8n 2 AI Agent Stack (Ollama + Qdrant)",
-  "description": "n8n queue mode with workers, local LLMs via Ollama and Qdrant vector memory.",
+  "description": "n8n queue mode with workers, local LLMs via Ollama and Qdrant memory.",
   "category": "Automation",
   "tags": [
     "n8n",
